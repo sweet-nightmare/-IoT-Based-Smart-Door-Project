@@ -27,6 +27,7 @@ Dapat memahami dasar-dasar dalam perancangan alat IoT meliputi pembuatan kodinga
 
 # Alat-alat
 Komponen | Fungsi | Jumlah | Price 
+-| -| -| -
 ESP8266 NodeMCU V3 | Mengumpulkan data dari sensor, melakukan transfer data, menggerakkan aktuator | 2 | Rp 55.000
 Buzzer | Digunakan untuk alarm ketika pintu terbuka | 1 | Rp 1.800
 MC-38 Sensor | Sensor magnetik yang dapat mengirimkan sinyal biner 0 atau 1 | 1 | Rp 9.000
