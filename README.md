@@ -26,14 +26,14 @@ Dapat memahami konsep IoT sederhana serta menerapkannya dengan cara merancang su
 Dapat memahami dasar-dasar dalam perancangan alat IoT meliputi pembuatan kodingan, rangkaian elektronik, jaringan, serta database. 
 
 # Alat-alat
-Komponen | Fungsi | Jumlah | Price 
+Komponen | Fungsi | Jumlah | Harga Satuan
 -| -| -| -
 ESP8266 NodeMCU V3 | Mengumpulkan data dari sensor, melakukan transfer data, menggerakkan aktuator | 2 | Rp 55.000
 Buzzer | Digunakan untuk alarm ketika pintu terbuka | 1 | Rp 1.800
 MC-38 Sensor | Sensor magnetik yang dapat mengirimkan sinyal biner 0 atau 1 | 1 | Rp 9.000
 Solenoid Lock | Sebagai aktuator untuk mengunci pintu | 1 | Rp 43.000
 Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
-Baterai 3V | Sebagai penyuplai daya pada rangkaian | 8 | Rp 20.000
+Baterai 9V | Sebagai penyuplai daya pada rangkaian | 4 | Rp 10.000
 
 ![material](https://user-images.githubusercontent.com/108582271/177007654-dc706edb-46cb-425e-a652-3f34982a3d64.jpg)
 Figure 1: Components used for the project
