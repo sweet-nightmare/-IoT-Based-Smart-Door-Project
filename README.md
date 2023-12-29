@@ -65,26 +65,246 @@ Platform yang digunakan sebagai antarmuka atau dashboard adalah Node-RED. Node-R
 ![Node-RED](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRed.png)
 Gambar 3 : Node-RED Flow
 
+
 ![Node-REDUI](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRedUI.png)
 Gambar 4 : Dashboard Node-RED
 
-# The code
-The first code part shown in figure 4 has first the necessary libaries that is needed for the project such as machine that is used for connecting to the microcontroller, dht that is used for getting the DHT11 sensor to work, network for connecting the device to wifi and mqtt for sending data over the internet.
+# Coding Program
+**Node Sender:**
+```cpp
+#include <ESP8266WiFi.h>
+#include <ESPNowW.h>
+#include <TaskScheduler.h>
 
-Then there is variables that are used later in the code, configuration for network and adrafruit and then Setup of the sensors
-![Screenshot 2022-07-04 175535](https://user-images.githubusercontent.com/108582271/177188324-6c395256-11cb-4a19-aa8a-82b2184e3fb5.jpg)
-Figure 4: First code snippet
+Scheduler taskScheduler;
 
-This is the main function of the code that tries to  measures data from the sensors, prints the values and then tries to send that data to adafruit and throws exceptions if anything goes wrong.
-![Screenshot 2022-07-04 174224](https://user-images.githubusercontent.com/108582271/177186533-3771a6e4-dc13-4d42-8faf-777e1dd182b1.jpg)
-Figure 5: Second code snippet
+const int sensorPin = D2;
+const int buzzerPin = D1;
 
-First we have the function restart_and_reconnect that restart the microcontroller and gets called if a exception gets called in the code that would make the code crash. Then do_connect is a function that connects the device to wife.
+uint8_t broadcastAddress[] = {0x48, 0x55, 0x19, 0xF0, 0xC7, 0x9B};
 
-The code under that tries to set up a connection between the device and adafruit by using MQTT and calls restart_and_reconnect if something goes wrong. Then lastly we have the infinite loop that calls send_sensor_data() until a exception gets thrown and in that case calls restart_and_reconnect.
+struct struct_message {
+   int sensorValue;
+};
+struct_message dataToSend;
 
-![Screenshot 2022-07-04 174313](https://user-images.githubusercontent.com/108582271/177186549-74b6d82a-0870-495f-9138-727c9018c406.jpg)
-Figure 6: Third code snippet
+void OnDataSent(uint8_t *mac_addr, uint8_t sendStatus) {
+  Serial.print("Last Packet Send Status: ");
+  if (sendStatus == 0) {
+    Serial.println("Pengiriman sukses");
+  } else {
+    Serial.println("Pengiriman Gagal");
+  }
+}
+
+
+void readSensor(); // Declare readSensor function
+
+Task taskSensor(100, TASK_FOREVER, &readSensor);
+
+void readSensor() {
+  // Baca sensor MC38
+  int sensorValue = digitalRead(sensorPin);
+
+  // Buat objek struct_message dan isi nilai sensor
+  dataToSend.sensorValue = sensorValue;
+
+  // Kirim data melalui ESPNow
+  esp_now_send(broadcastAddress, (uint8_t*)&dataToSend, sizeof(dataToSend));
+
+  // Cek nilai sensor
+  if (sensorValue == 1) {
+    digitalWrite(buzzerPin,HIGH); //hidupkan buzzer
+    delay(100);
+    digitalWrite(buzzerPin,LOW); //matikan buzzer
+    delay(100);
+  } else {
+    // Jika nilai sensor adalah 1, aktifkan buzzer
+    digitalWrite(buzzerPin,LOW); // matikan buzzer
+  }
+
+  // Lakukan sesuatu dengan nilai sensor, contoh: cetak nilai
+  Serial.print("Sensor Value: ");
+  Serial.println(sensorValue);
+}
+
+void setup() {
+  // Init Serial Monitor
+  Serial.begin(115200);
+
+  // Set device as a Wi-Fi Station
+  WiFi.mode(WIFI_STA);
+
+  // Init ESP-NOW
+  if (esp_now_init() != 0) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  esp_now_set_self_role(ESP_NOW_ROLE_CONTROLLER);
+  esp_now_register_send_cb(OnDataSent);
+
+  // Register peer
+  esp_now_add_peer(broadcastAddress, ESP_NOW_ROLE_SLAVE, 1, NULL, 0);
+
+  pinMode(sensorPin, INPUT_PULLUP);
+  pinMode(buzzerPin, OUTPUT);
+
+  taskScheduler.init();
+  taskScheduler.addTask(taskSensor);
+  taskSensor.enable();
+  taskScheduler.startNow();
+  readSensor();
+}
+
+void loop() {
+  // Eksekusi tugas pada jadwal yang ditentukan oleh scheduler
+  taskScheduler.execute();
+}
+```
+
+**Node Receiver:**
+```cpp
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
+#include <PubSubClient.h>
+#include <ESPNowW.h>
+
+const int relayPin = 2;
+
+
+const char *ssid = "Ikooo's WiFi";
+const char *password = "23112311";
+
+const char *mqtt_broker = "broker.emqx.io";
+const char *topic1 = "kelasiotesp/Al-Alamin/relay";
+const char *mqtttopic = "kelasiotesp/Al-Alamin/sensor";
+const char *mqtt_username = "emqx";
+const char *mqtt_password = "public";
+const char *clientId = "MASKO";
+
+const int mqtt_port = 1883;
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+uint32_t counter;
+char str[80];
+
+typedef struct struct_message {
+    int sensorValue;
+} struct_message;
+
+struct_message receivedData;
+
+void OnDataRecv(uint8_t * mac, uint8_t *incomingData, uint8_t len) {
+  memcpy(&receivedData, incomingData, sizeof(struct_message));
+if (receivedData.sensorValue == 1) {
+    digitalWrite(relayPin, HIGH); // Aktifkan alarm
+    Serial.println("Alarm: Terdeteksi Pembobolan Pintu!");
+    delay(1000); // Tambahkan delay untuk suara alarm atau tindakan lainnya
+    digitalWrite(relayPin, LOW); // Matikan alarm
+    if (client.connected()) {
+      client.publish(mqtttopic, "Terdeteksi Pembobolan Pintu!");
+    }
+}
+}
+void callback(char *topic, byte *payload, unsigned int length) {
+  Serial.print("Message arrived in topic: ");
+  Serial.println(topic);
+  Serial.print("Message: ");
+
+  for (unsigned int i = 0; i < length; i++) {
+    Serial.print((char)payload[i]);
+  }
+  Serial.println();
+  Serial.println("Relay status: ");
+
+  String payloadStr = "";
+  for (unsigned int i = 0; i < length; i++) {
+    payloadStr += (char)payload[i];
+  }
+
+  if (strcmp(topic1, topic1) == 0) { 
+    if (payloadStr.equals("0")) { 
+      digitalWrite(relayPin, HIGH); 
+      Serial.println("Relay turned ON");
+    } else if (payloadStr.equals("1")) { 
+      digitalWrite(relayPin, LOW);  
+      Serial.println("Relay turned OFF");
+    }
+  }
+
+  Serial.println();
+}
+
+
+
+void setup() {
+
+ Serial.begin(115200);
+
+ WiFi.begin(ssid, password);
+ while (WiFi.status() != WL_CONNECTED) {
+     delay(500);
+     Serial.println("Connecting to WiFi..");
+ }
+ Serial.println("Connected to the WiFi network");
+ 
+ client.setServer(mqtt_broker, mqtt_port);
+ client.setCallback(callback);
+ while (!client.connected()) {
+     String client_id = "esp8266-client-";
+     client_id += String(WiFi.macAddress());
+     Serial.printf("The client %s connects to the public mqtt broker\n", client_id.c_str());
+     if (client.connect(client_id.c_str(), mqtt_username, mqtt_password)) {
+         Serial.println("Public emqx mqtt broker connected");
+     } else {
+         Serial.print("failed with state ");
+         Serial.print(client.state());
+         delay(2000);
+     }
+    if (esp_now_init() != 0) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  esp_now_set_self_role(ESP_NOW_ROLE_SLAVE);
+  esp_now_register_recv_cb(OnDataRecv);
+ }
+ 
+  client.publish(topic1, "Hi EMQX I'm esp ^^");
+  client.subscribe(topic1);
+ 
+  pinMode(relayPin, OUTPUT);
+}
+
+void reconnect() {
+  while (!client.connected()) {
+    String client_id = "esp8266-client-";
+    client_id += String(WiFi.macAddress());
+    Serial.printf("Attempting to reconnect to the public MQTT broker as %s\n", client_id.c_str());
+    if (client.connect(client_id.c_str(), mqtt_username, mqtt_password)) {
+      Serial.println("Reconnected to MQTT broker");
+
+      client.subscribe(topic1);
+  
+    } else {
+      Serial.print("Reconnect failed, state=");
+      Serial.print(client.state());
+      Serial.println(". Retrying in 5 seconds...");
+      delay(5000);
+    }
+  }
+}
+
+void loop() {
+ client.loop();
+ if (!client.connected()) {
+    reconnect();
+  }
+  delay(1000);
+}
+```
 
 # Transmitting the data / connectivity
 
