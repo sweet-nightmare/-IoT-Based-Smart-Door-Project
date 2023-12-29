@@ -49,22 +49,24 @@ Download dan install library yang diperlukan untuk project, antara lain :
 2. ESPNow
 3. TaskScheduler
 
-# Buat Rangkaian
-The setup of the device and the wiring is shown in a circuit diagram in Figure 3. Note that i could not find the exact same microcontroller that i used but it has the same amount of pins on each side, so the diagram shows in what spot you to put the wires. I also could not find the exact soil moisture senor but this one has the exact same wiring.
+# Desain Rangkaian
+![Circuit](NodeDesign.png)
+Gambar 2 : Desain rangkaian
 
-![Screenshot 2022-07-03 153746](NodeDesign.png)
+Sistem terdiri dari dua node. Node pertama sebagai sender dan node kedua sebagai receiver.
 
-Figure 2: Wiring of the components
+Untuk node pertama, kabel positif sensor MC-38 terhubung ke pin D2 node MCU dan kabel negatif ke pin ground. Lalu, pin positif buzzer terhubung ke pin D1 dan kabel negatif ke pin ground node MCU.
 
-The EPS32 is put on in right side of the breadboard so the left side pins of the microcontroller can be used. It is powerd by a micro USB cable either connected to a power supply or to a computer. The Vin pin is connected to the breadboards power supply line to give power to the senors and the GND pin is conneced to the GND line. 
+Untuk node kedua, pin D1 pada relay dihubungkan dengan pin D1 node MCU, pin 5V terhubung ke pin Vin node MCU, dan pin ground relay terhubung ke pin ground node MCU. Lalu, untuk kabel positif solenoid lock terhubung ke pin COM relay, dan kabel negatif solenoid lock terhubung ke kabel negatif power supply. Sedangkan kabel positif power supply terhubung ke pin NO pada relay.
 
-Both sensors have a GND pin that is also connected to the breadboards GND line VCC that is connected to the breadboards power supply line. Then each have one data transfer pin, since the capacitive soil moisture sensor is a analog senor then the data pin is wired to a ADC (Analogue to Digital Converter)  pin in this case GPIO36 and DHT11 is connected to GPIO14.
+# Platform yang digunakan
+Platform yang digunakan sebagai antarmuka atau dashboard adalah Node-RED. Node-RED adalah alat pemrograman visual berbasis web yang dibangun di atas Node.js. Node-RED dapat digunakan untuk membuat desain antarmuka grafis berbasis browser yang memungkinkan pengguna untuk membuat alur kerja (flow-based programming) dengan menghubungkan node-node yang mewakili fungsi atau layanan berbeda. 
 
-# Chosen platform
-The platform i choose for this project is Adafruit since it is a free cloud service that seemed to fit my project with what it has to offer. It is able to easily visualize your data in real-time online in their dashboard where you can choose if you want to see it in a diagram, as a Gauge or any other form. It also offers the opportunity to analyse the data online in simple ways by going to the feeds.
+![Node-RED](NodeRed.png)
+Gambar 3 : Node-RED Flow
 
-![Screenshot 2022-07-03 161432](https://user-images.githubusercontent.com/108582271/177043837-c7ffd412-ce5b-40e6-ada5-160e3ae2873e.jpg)
-Figure 3: The dashboard page on Adafruit
+![Node-REDUI](NodeRedUI.png)
+Gambar 4 : Dashboard Node-RED
 
 # The code
 The first code part shown in figure 4 has first the necessary libaries that is needed for the project such as machine that is used for connecting to the microcontroller, dht that is used for getting the DHT11 sensor to work, network for connecting the device to wifi and mqtt for sending data over the internet.
