@@ -1,35 +1,35 @@
-# Smart Door Berbasis IoT 
+# Project Smart Door Berbasis IoT 
 
 **Name:**
 1. FERIKHO FATIH AZHAR (1103202190)
-2. MOHAMAD AQWAM FARID (1103201263
-3. KRESHNA PUTRA S. 1103202215
-4. NURDIN 1103204006
-5. ADAM AL-AZIZ OLII 1103204045
+2. MOHAMAD AQWAM FARID (1103201263)
+3. KRESHNA PUTRA S.    (1103202215)
+4. NURDIN              (1103204006)
+5. ADAM AL-AZIZ OLII   (1103204045)
 
-# Short project overview
-This project is aimed to construct a simple iot device with 2 sensors for placement besides your plant that monitors the temperature and air humidity around the plant aswell as the humidity in the plants soil in order to se when you need to water your plant. 
+# Ringkasan Project
+Project ini bertujuan untuk merancang sistem smart door atau pintu cerdas berbasis IoT. Sistem ini nantinya akan dapat mendeteksi apabila terjadi usaha pembobolan pintu yang tidak diinginkan, lalu mengirim sinyal yang dapat memicu alarm untuk berbunyi.
 
-**Approxiamtion of time needed for the project:**
+**Perkiraan waktu pengerjaan yang dibutuhkan**
 
-Around one hour to two hours
+Sekitar 3 jam
 
 
-# Objective
-**Reasons for choosing the project:**
-The reason i choose this project is that i have some plants in my home and have the habit of sometimes forgetting to water them in time before they start to wither so being able to the when i should water the plants depending on the soils moisture level will probably counteract that. 
+# Pemdahuluan
+**Alasan memilih project:**
+Kemajuan teknologi mendorong peningkatkan kualitas serta efektivitas segala aspek kehidupan manusia. Keamanan adalah salah satu aspek yang perlu untuk diperhatikan dan senantiasa diperbarui kualitasnya. Dengan sistem smart door yang kami buat, proses monitoring keamanan pintu dapat dilakukan dengan lebih mudah dan efisien serta lebih optimal dalam penggunaan sumber dayanya.
 
 **Purposes of the project:**
-The purpose of this project is firstly to learn about the Inter of things, how to build a iot device and connect it to a platform to visualize its data. And secondly to monitor my plants to see when i need to water them.
+Dapat memahami konsep IoT sederhana serta menerapkannya dengan cara merancang suatu alat, yakni Sistem Smart Door DBerbasis IoT.
 
 **Insights gained by doing the project:**
-The project is able to give insights in basic concepts of IOT, programming and electric circuits. 
+Dapat memahami dasar-dasar dalam perancangan alat IoT meliputi pembuatan kodingan, rangkaian elektronik, jaringan, serta database. 
 
-# Material
-Component | Purpose of | Bought at | Price 
--| -| -| -
-ESP32 DEVKIT V1 DOIT | A microcontroller used for data collection, data transfer, and data analysis. | sizable.se | 94 sek 
-Capacitive soil moisture sensor | A sensor that mesures the humidity in soil  | amazon.se | 72 sek
+# Alat-alat
+Komponen | Fungsi | Price 
+ESP8266 NodeMCU V3 | digunakan untuk mengumpulkan data dari sensor serta melakukan transfer data | | Rp 55.000
+Buzzer | Digunakan untuk alarm ketika pintu terbuka | Rp 1.800
+MC-38 Sensor | A sensor that mesures the humidity in soil  | amazon.se | 72 sek
 DHT11 | A sensor used for mesuring the humidity in the air asweel as the temperature | sizable.se | 28 sek
 40x jumper wires Male/Male | Wires for connecting the different components | sizable.se | 24 sek
 Breadboard 400 points | A board used to easy connect the sensors without soldering | sizable.se | 34 sek
