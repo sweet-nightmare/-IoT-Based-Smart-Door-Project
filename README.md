@@ -319,6 +319,8 @@ void loop() {
 
 # Desain Final
 ![Rangkaian](Rangkaian.jpg)
+
+
 Gambar 5 : Berikut adalah foto dari rangkaian final dari project yang telah kami buat
 
 # Kesimpulan
