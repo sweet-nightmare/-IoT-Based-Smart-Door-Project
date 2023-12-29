@@ -313,8 +313,9 @@ void loop() {
 
 
 # Desain Final
+![Circuit](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Rangkaian.jpg)
+Gambar 5 : Berikut adalah foto dari rangkaian final dari project yang telah kami buat
 
-
-**Kesimpulan**
+# Kesimpulan
 Meskipun banyak tantangan yang dilalui, namun pada akhirnya kami berhasil menyelesaikan project ini. Setelah berhasil menyelesaikan project Smart Door Berbasis IoT ini, kami mendapatkan banyak pelajaran terutama terkait dengan pemahaman mengenai konsep IoT. Kami belajar bagaimana cara mendesain suatu rangkaian, menyusun rangkaian, membuat kode supaya rangkaiannya bisa berjalan sesuai dengan yang kita inginkan, serta menghubungkan kode tersebut dengan dashbord UI.
 
