@@ -313,7 +313,7 @@ void loop() {
 
 
 # Desain Final
-![Circuit](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Rangkaian.jpg)
+![Rangkaian](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Rangkaian.jpg)
 Gambar 5 : Berikut adalah foto dari rangkaian final dari project yang telah kami buat
 
 # Kesimpulan
