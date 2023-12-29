@@ -318,7 +318,7 @@ void loop() {
 
 
 # Desain Final
-<img src="Rangkaian.jpg" width="800" height="600">
+![RangkaianFinal](Rangkaian.jpg)
 Gambar 5 : Berikut adalah foto dari rangkaian final dari project yang telah kami buat
 
 # Kesimpulan
