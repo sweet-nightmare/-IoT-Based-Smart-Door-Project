@@ -318,7 +318,7 @@ void loop() {
 
 
 # Desain Final
-![Rangkaian](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Rangkaian.jpg)
+![Rangkaian](Rangkaian.jpg)
 Gambar 5 : Berikut adalah foto dari rangkaian final dari project yang telah kami buat
 
 # Kesimpulan
