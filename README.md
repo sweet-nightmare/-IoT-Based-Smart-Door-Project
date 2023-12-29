@@ -36,27 +36,20 @@ Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
 Baterai 9V | Sebagai penyuplai daya pada rangkaian | 4 | Rp 10.000
 
 ![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/AlatAlat.jpg)
-Figure 1: Components used for the project
+Gambar 1 : Alat-alat yang digunakan
 
-All components are shown in Figure 1. From left to right:
-* Breadboard
-* ESP32 DEVKIT V1 DOIT
-* Capacitive soil moisture sensor. With its wires beneath it
-* DHT11
-* Jumper wires
 
-# Computer setup
-**Setting up the IDE:**
+# Setup
+**Setup IDE:**
 
-The first step to set up the ESP32 is by first connecting the device to a computer and then downloading the the latest hardware driver available. The link i used https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip
+Download dan Install PlatformIO pada VSCode untuk menyusun kode program.
 
-The next step is to update the firmware of the ESP32. This is done by donwloading this file https://micropython.org/resources/firmware/esp32-20220117-v1.18.bin to your computer and on this website https://nabucasa.github.io/esp-web-flasher/ connect your development board by choosing 460800 Baud in the top right corner and pressing connect. You then press erase to delete the files on the board so that you then can enter aoffset of 100 and in "choose file" select the downloaded file and then press "Program".(It takes a while and during this time don’t disconnect your board from the USB cable)
+Download dan install library yang diperlukan untuk project, antara lain :
+1. PubSubClient
+2. ESPNow
+3. TaskScheduler
 
-The next thing to do is to download and install Node js (Windows download link https://nodejs.org/en/) and choose a IDE for the project and i choose work in Atom.io (Windows download link https://atom.io/). Then add the Pymakr plugin to Atom by going to File >> Settings >> Install and Look for Pymakr and Install it. (It takes a while; wait until shows it is successfully installed)
-
-You are now ready to run your code on the development board. In order to uppload the code you need to open the Pymakr plugin that you find at the bottom and go into its setting and choose global settings. Enter the device com port into the Device address (list) field (which can be found in the device manager) and remove the check box selection from Safe-boot before upload. Go back and press Connect device in Pymakr and choose your COM port to connect to your board. Now you just need to press Upload project to device in order to run your code on the board.
-
-# Putting everything together
+# Buat Rangkaian
 The setup of the device and the wiring is shown in a circuit diagram in Figure 3. Note that i could not find the exact same microcontroller that i used but it has the same amount of pins on each side, so the diagram shows in what spot you to put the wires. I also could not find the exact soil moisture senor but this one has the exact same wiring.
 
 ![Screenshot 2022-07-03 153746](https://user-images.githubusercontent.com/108582271/177042312-ed59c1e5-c0c5-4794-9272-6547b3453352.jpg)
