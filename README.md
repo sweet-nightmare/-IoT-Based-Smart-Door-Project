@@ -52,7 +52,7 @@ Download dan install library yang diperlukan untuk project, antara lain :
 # Buat Rangkaian
 The setup of the device and the wiring is shown in a circuit diagram in Figure 3. Note that i could not find the exact same microcontroller that i used but it has the same amount of pins on each side, so the diagram shows in what spot you to put the wires. I also could not find the exact soil moisture senor but this one has the exact same wiring.
 
-![Screenshot 2022-07-03 153746]([https://user-images.githubusercontent.com/108582271/177042312-ed59c1e5-c0c5-4794-9272-6547b3453352.jpg](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png))
+![Screenshot 2022-07-03 153746](NodeDesign.png)
 
 Figure 2: Wiring of the components
 
