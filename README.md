@@ -1,11 +1,16 @@
 # Project Smart Door Berbasis IoT 
+**Nama Kelompok:**
+Al-Alamin
 
-**Name:**
+**Anggota:**
 1. FERIKHO FATIH AZHAR (1103202190)
 2. MOHAMAD AQWAM FARID (1103201263)
 3. KRESHNA PUTRA S.    (1103202215)
 4. NURDIN              (1103204006)
 5. ADAM AL-AZIZ OLII   (1103204045)
+
+**Institusi:**
+Telkom University
 
 # Ringkasan Project
 Project ini bertujuan untuk merancang sistem smart door atau pintu cerdas berbasis IoT. Sistem ini nantinya akan dapat mendeteksi apabila terjadi usaha pembobolan pintu yang tidak diinginkan, lalu mengirim sinyal yang dapat memicu alarm untuk berbunyi.
