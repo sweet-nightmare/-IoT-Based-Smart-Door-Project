@@ -15,7 +15,7 @@ Project ini bertujuan untuk merancang sistem smart door atau pintu cerdas berbas
 Sekitar 3 jam
 
 
-# Pemdahuluan
+# Pendahuluan
 **Latar Belakang:**
 Kemajuan teknologi mendorong peningkatkan kualitas serta efektivitas segala aspek kehidupan manusia. Keamanan adalah salah satu aspek yang perlu untuk diperhatikan dan senantiasa diperbarui kualitasnya. Dengan sistem smart door yang kami buat, proses monitoring keamanan pintu dapat dilakukan dengan lebih mudah dan efisien serta lebih optimal dalam penggunaan sumber dayanya.
 
