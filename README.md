@@ -16,13 +16,13 @@ Sekitar 3 jam
 
 
 # Pemdahuluan
-**Alasan memilih project:**
+**Latar Belakang:**
 Kemajuan teknologi mendorong peningkatkan kualitas serta efektivitas segala aspek kehidupan manusia. Keamanan adalah salah satu aspek yang perlu untuk diperhatikan dan senantiasa diperbarui kualitasnya. Dengan sistem smart door yang kami buat, proses monitoring keamanan pintu dapat dilakukan dengan lebih mudah dan efisien serta lebih optimal dalam penggunaan sumber dayanya.
 
-**Purposes of the project:**
+**Tujuan:**
 Dapat memahami konsep IoT sederhana serta menerapkannya dengan cara merancang suatu alat, yakni Sistem Smart Door Berbasis IoT.
 
-**Insights gained by doing the project:**
+**Manfaat:**
 Dapat memahami dasar-dasar dalam perancangan alat IoT meliputi pembuatan kodingan, rangkaian elektronik, jaringan, serta database. 
 
 # Alat-alat
