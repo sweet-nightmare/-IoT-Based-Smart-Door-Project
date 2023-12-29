@@ -35,7 +35,7 @@ Solenoid Lock | Sebagai aktuator untuk mengunci pintu | 1 | Rp 43.000
 Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
 Baterai 9V | Sebagai penyuplai daya pada rangkaian | 4 | Rp 10.000
 
-![material](https://user-images.githubusercontent.com/108582271/177007654-dc706edb-46cb-425e-a652-3f34982a3d64.jpg)
+![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/AlatAlat.jpg)
 Figure 1: Components used for the project
 
 All components are shown in Figure 1. From left to right:
