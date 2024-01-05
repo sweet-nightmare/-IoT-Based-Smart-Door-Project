@@ -59,7 +59,7 @@ Download dan install library yang diperlukan untuk project, antara lain :
 Gambar 2 : Desain Sender
 
 ![Receiver](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Receiver.jpg)
-Gambar 2 : Desain Receiver
+Gambar 3 : Desain Receiver
 
 Sistem terdiri dari dua node. Node pertama sebagai sender dan node kedua sebagai receiver.
 
@@ -70,12 +70,12 @@ Untuk node kedua, pin D1 pada relay dihubungkan dengan pin D1 node MCU, pin 5V t
 # Platform yang digunakan
 Platform yang digunakan sebagai antarmuka atau dashboard adalah Node-RED. Node-RED adalah alat pemrograman visual berbasis web yang dibangun di atas Node.js. Node-RED dapat digunakan untuk membuat desain antarmuka grafis berbasis browser yang memungkinkan pengguna untuk membuat alur kerja (flow-based programming) dengan menghubungkan node-node yang mewakili fungsi atau layanan berbeda. 
 
-![Node-RED](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRed.png)
-Gambar 3 : Node-RED Flow
+![Node-RED](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRED1.jpg)
+Gambar 4 : Node-RED Flow
 
 
-![Node-REDUI](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRedUI.png)
-Gambar 4 : Dashboard Node-RED
+![Node-REDUI](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRED2.jpg)
+Gambar 5 : Dashboard Node-RED
 
 # Coding Program
 **Node Sender:**
