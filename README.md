@@ -41,7 +41,7 @@ Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
 Breadboard | Untuk mempermudah pembuatan rangkaian perangkat keras | 1 | Rp. 12.000
 Kabel UCB to Micro USB | Untuk upload kodingan ke mikrokontroller | 2 | Rp. 5.000
 Kabel Jumper | Untuk menghubungkan rangkaian | 10 | Rp. 1.000
-Power Supplu 12V | Sebagai penyuplai daya pada rangkaian | 1 | -
+Power Supply 12V | Sebagai penyuplai daya pada rangkaian | 1 | -
 
 ![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/AlatAlat.jpg)
 Gambar 1 : Alat-alat yang digunakan
@@ -54,7 +54,6 @@ Download dan Install PlatformIO pada VSCode untuk menyusun kode program.
 Download dan install library yang diperlukan untuk project, antara lain :
 1. PubSubClient
 2. ESPNow
-3. TaskScheduler
 
 # Desain Rangkaian
 ![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png)
