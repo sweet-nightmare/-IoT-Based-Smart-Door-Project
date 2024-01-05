@@ -9,6 +9,12 @@ Al-Alamin
 4. NURDIN              (1103204006)
 5. ADAM AL-AZIZ OLII   (1103204045)
 
+**Prodi:**
+Teknik Komputer
+
+**Fakultas:**
+Teknik Elektro
+
 **Institusi:**
 Telkom University
 
