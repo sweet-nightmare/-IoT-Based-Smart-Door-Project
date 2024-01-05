@@ -55,8 +55,11 @@ Download dan install library yang diperlukan untuk project, antara lain :
 3. TaskScheduler
 
 # Desain Rangkaian
-![Circuit](NodeDesign.png)
-Gambar 2 : Desain rangkaian
+![Sender](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Sender.jpg)
+Gambar 2 : Desain Sender
+
+![Receiver](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Receiver.jpg)
+Gambar 2 : Desain Receiver
 
 Sistem terdiri dari dua node. Node pertama sebagai sender dan node kedua sebagai receiver.
 
