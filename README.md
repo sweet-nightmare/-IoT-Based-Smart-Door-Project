@@ -51,7 +51,6 @@ Download dan Install PlatformIO pada VSCode untuk menyusun kode program.
 Download dan install library yang diperlukan untuk project, antara lain :
 1. PubSubClient
 2. ESPNow
-3. TaskScheduler
 
 # Desain Rangkaian
 ![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png)
