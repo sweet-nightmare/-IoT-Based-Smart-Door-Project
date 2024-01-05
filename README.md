@@ -51,6 +51,7 @@ Download dan Install PlatformIO pada VSCode untuk menyusun kode program.
 Download dan install library yang diperlukan untuk project, antara lain :
 1. PubSubClient
 2. ESPNow
+3. TaskScheduler
 
 # Desain Rangkaian
 ![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png)
@@ -264,19 +265,28 @@ void loop() {
 ```
 
 # Konektivitas dan Pertukaran Data
+ESPNow :
+1. Terdapat node sender dan node receiver. 
+2. Node sender yang terhubung dengan sensor akan mengirim data dari sensor ke node receiver menggunakan protokol ESPNow.
 
+MQTT :
+1. Terdapat 2 topic, yakni relay dan sensor.
+2. Topic sensor merupakan topic MQTT In yang menggunakan data yang diterima dari node sender, kemudian data tersebut diproses menggunakan kodingan if untuk menentukan alarm yang muncul di dashboard.
+3. Topic relay merupakan topic MQTT Out yang berfungsi untuk mengirimkan data dan mengeksekusi program dari alat berdasarkan input yang dimasukkan.
 
-# Presenting the data
+![Sender](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Notifikasi1.jpg)
+Gambar 5 : Notifikasi Pintu Terbuka
 
+![Receiver](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Notifikasi2.jpg)
+Gambar 6 : Notifikasi Pintu Tertutup
 
 # Desain Final
 Berikut ini adalah desain final dari rangkaian yang telah kami buat.
 ![Sender](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Sender.jpg)
-Gambar 5 : Desain Sender
+Gambar 7 : Desain Sender
 
 ![Receiver](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Receiver.jpg)
-Gambar 6 : Desain Receiver
+Gambar 8 : Desain Receiver
 
 # Kesimpulan
 Meskipun banyak tantangan yang dilalui, namun pada akhirnya kami berhasil menyelesaikan project ini. Setelah berhasil menyelesaikan project Smart Door Berbasis IoT ini, kami mendapatkan banyak pelajaran terutama terkait dengan pemahaman mengenai konsep IoT. Kami belajar bagaimana cara mendesain suatu rangkaian, menyusun rangkaian, membuat kode supaya rangkaiannya bisa berjalan sesuai dengan yang kita inginkan, serta menghubungkan kode tersebut dengan dashbord UI.
-
