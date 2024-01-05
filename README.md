@@ -38,9 +38,12 @@ Buzzer | Digunakan untuk alarm ketika pintu terbuka | 1 | Rp 1.800
 MC-38 Sensor | Sensor magnetik yang dapat mengirimkan sinyal biner 0 atau 1 | 1 | Rp 9.000
 Solenoid Lock | Sebagai aktuator untuk mengunci pintu | 1 | Rp 43.000
 Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
-Baterai 9V | Sebagai penyuplai daya pada rangkaian | 2 | Rp 10.000
+Breadboard | Untuk mempermudah pembuatan rangkaian perangkat keras | 1 | Rp. 12.000
+Kabel UCB to Micro USB | Untuk upload kodingan ke mikrokontroller | 2 | Rp. 5.000
+Kabel Jumper | Untuk menghubungkan rangkaian | 10 | Rp. 1.000
+Power Supplu 12V | Sebagai penyuplai daya pada rangkaian | 1 | -
 
-![material](aaa.jpg)
+![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/AlatAlat.jpg)
 Gambar 1 : Alat-alat yang digunakan
 
 # Setup
