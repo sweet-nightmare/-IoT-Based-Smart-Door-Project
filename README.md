@@ -40,9 +40,8 @@ Solenoid Lock | Sebagai aktuator untuk mengunci pintu | 1 | Rp 43.000
 Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
 Baterai 9V | Sebagai penyuplai daya pada rangkaian | 2 | Rp 10.000
 
-![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png)
+![material](aaa.jpg)
 Gambar 1 : Alat-alat yang digunakan
-
 
 # Setup
 **Setup IDE:**
@@ -55,11 +54,8 @@ Download dan install library yang diperlukan untuk project, antara lain :
 3. TaskScheduler
 
 # Desain Rangkaian
-![Sender](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Sender.jpg)
-Gambar 2 : Desain Sender
-
-![Receiver](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Receiver.jpg)
-Gambar 3 : Desain Receiver
+![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png)
+Gambar 2 : Desain Rangkaian
 
 Sistem terdiri dari dua node. Node pertama sebagai sender dan node kedua sebagai receiver.
 
@@ -71,11 +67,11 @@ Untuk node kedua, pin D1 pada relay dihubungkan dengan pin D1 node MCU, pin 5V t
 Platform yang digunakan sebagai antarmuka atau dashboard adalah Node-RED. Node-RED adalah alat pemrograman visual berbasis web yang dibangun di atas Node.js. Node-RED dapat digunakan untuk membuat desain antarmuka grafis berbasis browser yang memungkinkan pengguna untuk membuat alur kerja (flow-based programming) dengan menghubungkan node-node yang mewakili fungsi atau layanan berbeda. 
 
 ![Node-RED](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRED1.jpg)
-Gambar 4 : Node-RED Flow
+Gambar 3 : Node-RED Flow
 
 
 ![Node-REDUI](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeRED2.jpg)
-Gambar 5 : Dashboard Node-RED
+Gambar 4 : Dashboard Node-RED
 
 # Coding Program
 **Node Sender:**
@@ -275,8 +271,12 @@ void loop() {
 
 
 # Desain Final
-![RangkaianFinal](Rangkaian.jpg)
-Gambar 5 : Berikut adalah foto dari rangkaian final dari project yang telah kami buat
+Berikut ini adalah desain final dari rangkaian yang telah kami buat.
+![Sender](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Sender.jpg)
+Gambar 5 : Desain Sender
+
+![Receiver](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/Node_Receiver.jpg)
+Gambar 6 : Desain Receiver
 
 # Kesimpulan
 Meskipun banyak tantangan yang dilalui, namun pada akhirnya kami berhasil menyelesaikan project ini. Setelah berhasil menyelesaikan project Smart Door Berbasis IoT ini, kami mendapatkan banyak pelajaran terutama terkait dengan pemahaman mengenai konsep IoT. Kami belajar bagaimana cara mendesain suatu rangkaian, menyusun rangkaian, membuat kode supaya rangkaiannya bisa berjalan sesuai dengan yang kita inginkan, serta menghubungkan kode tersebut dengan dashbord UI.
