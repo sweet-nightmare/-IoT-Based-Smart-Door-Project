@@ -40,7 +40,7 @@ Solenoid Lock | Sebagai aktuator untuk mengunci pintu | 1 | Rp 43.000
 Relay 5V | Sebagai pengendali arus listrik rangkaian | 1 | Rp 5.000
 Baterai 9V | Sebagai penyuplai daya pada rangkaian | 2 | Rp 10.000
 
-![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/AlatAlat.jpg)
+![material](https://github.com/sweet-nightmare/IoT-Based-Smart-Door-Project/blob/main/NodeDesign.png)
 Gambar 1 : Alat-alat yang digunakan
 
 
