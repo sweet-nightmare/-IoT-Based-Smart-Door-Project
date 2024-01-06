@@ -298,3 +298,6 @@ Gambar 8 : Desain Receiver
 
 # Kesimpulan
 Meskipun banyak tantangan yang dilalui, namun pada akhirnya kami berhasil menyelesaikan project ini. Setelah berhasil menyelesaikan project Smart Door Berbasis IoT ini, kami mendapatkan banyak pelajaran terutama terkait dengan pemahaman mengenai konsep IoT. Kami belajar bagaimana cara mendesain suatu rangkaian, menyusun rangkaian, membuat kode supaya rangkaiannya bisa berjalan sesuai dengan yang kita inginkan, serta menghubungkan kode tersebut dengan dashbord UI.
+
+# Video Demo
+[![VIDEO DEMO](https://img.youtube.com/vi/d0djlJlSpHI)](https://www.youtube.com/watch?v=d0djlJlSpHI)
